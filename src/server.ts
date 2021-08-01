@@ -10,3 +10,8 @@ bot.addButton('Temp', () => {
     let stdout: string = execSync("sensors | grep temp1 | awk '{print $2}'").toString();
     return stdout;
 })
+
+bot.addButton('Tmux', () => {
+    let stdout: string = execSync("tmux ls").toString();
+    return stdout;
+})
