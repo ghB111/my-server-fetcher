@@ -17,7 +17,7 @@ bot.addButton('Tmux', () => {
 })
 
 bot.addButton('Uptime', () => {
-    let stdout: string = execSync("uptime | sed 's/,//g' | awk {'printf (\"%s %s %s %s\n\", $2, $3, $4, $5)'}")
+    let stdout: string = execSync("uptime -p")
         .toString();
     return stdout;
 })
