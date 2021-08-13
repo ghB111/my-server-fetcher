@@ -1,5 +1,13 @@
 #!/bin/bash
 
+npm install
+
+if [ ! -f "./res/token.secret" ]
+then
+  echo "Provide a bot token in './res/token.secret'"
+  exit 1
+fi
+
 user="$USER"
 
 # https://stackoverflow.com/questions/59895/how-can-i-get-the-source-directory-of-a-bash-script-from-within-the-script-itsel
