@@ -21,3 +21,9 @@ bot.addButton('Uptime', () => {
         .toString();
     return stdout;
 })
+
+bot.addButton('Services', () => {
+    let stdout: string = execSync("(cd $HOME/apps/; $HOME/apps/check_statuses.bash)")
+        .toString();
+    return stdout;
+})
